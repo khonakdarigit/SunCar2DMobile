@@ -71,7 +71,7 @@ public class Progress : MonoBehaviour
 
                 for (int i = 0; i < 25; i++)
                 {
-                    _realm.Add(new VehicleStatus() { Name = i.ToString(), Lock = i < 6 ? false : true });
+                    _realm.Add(new VehicleStatus() { Name = i.ToString(), Lock = i < 20 ? false : true });
                 }
 
                 var playerInfo = new PlayerInfo()

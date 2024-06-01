@@ -29,12 +29,12 @@ public class Coin : MonoBehaviour
             {
                 if (coinType == CoinType.Coin_Dim)
                 {
-                    GameManager.instance.AddDim((int)this.coinType);
+                    GameManager.instance.AddDim((int)this.coinType * 10);
 
                 }
                 else
                 {
-                    GameManager.instance.AddCoin((int)this.coinType);
+                    GameManager.instance.AddCoin((int)this.coinType * 10);
                 }
 
                 PlayGetCoinSound();

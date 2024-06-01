@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66a0aaf38a38214ea5cc973b0e6f91a, type: 3}
   m_Name: SelectedMarket
   m_EditorClassIdentifier: 
-  storName: 1
+  storName: 0

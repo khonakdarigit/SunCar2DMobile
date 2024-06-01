@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameObjectToSnapshot;
     private Action _FadeAndLoadGame;
 
-    internal static GameLanguage Language = GameLanguage.En;
+    internal static GameLanguage Language = GameLanguage.Fa;
     private VehicleStatus _vehicleStatus;
 
     private void Awake()
@@ -182,7 +182,7 @@ public class GameManager : MonoBehaviour
     internal void UnlockAndPayTuneNextLevel(VehicleStatus item_db, int coin_value, int dim_Value)
     {
         CoinBox -= coin_value;
-        DimBox -=  dim_Value;
+        DimBox -= dim_Value;
 
         Progress.instance.UnlockAndPayTuneNextLevel(item_db, CoinBox, DimBox);
         PayDialog.instnce.hide();

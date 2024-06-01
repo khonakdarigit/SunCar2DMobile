@@ -55,6 +55,13 @@ namespace Assets._2D_Car.Script
                     -7f + Add_Z_Value);
             }
 
+            if (followTransform)
+            {
+
+
+                if (isCameraFollow) transform.position = Vector3.SmoothDamp(transform.position, _Camera_Targetposition, ref velocity, smoothSpeed);
+                //Debug.Log($"velocity.x {velocity.x} velocity {velocity}");
+            }
 
         }
 
@@ -63,13 +70,7 @@ namespace Assets._2D_Car.Script
 
 
 
-            if (followTransform)
-            {
-
-
-                if (isCameraFollow) transform.position = Vector3.SmoothDamp(transform.position, _Camera_Targetposition, ref velocity, smoothSpeed);
-                //Debug.Log($"velocity.x {velocity.x} velocity {velocity}");
-            }
+          
 
         }
 
