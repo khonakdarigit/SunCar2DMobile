@@ -10767,6 +10767,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -40.99463
       objectReference: {fileID: 0}
+    - target: {fileID: 2908845773383571527, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908845773383571527, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908845773383571527, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1798604263}
+    - target: {fileID: 2908845773383571527, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: hide
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908845773383571527, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PayDialog, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908845773383571527, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3238257854325899822, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
       propertyPath: m_Camera
       value: 
@@ -10859,6 +10883,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -22.302734
       objectReference: {fileID: 0}
+    - target: {fileID: 5493295860262228185, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6323771852136202043, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.0009765625
@@ -10943,7 +10971,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5493295860262228185, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2199361455112524867, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
       insertIndex: -1
@@ -15178,6 +15207,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786113968}
   m_CullTransparentMesh: 1
+--- !u!114 &1798604263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 141497607762687970, guid: 75a04838bdb71e843b00116e5a963e3a, type: 3}
+  m_PrefabInstance: {fileID: 1233497144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95659849e3044be45bb9c7b8a6e6dfa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1820105191
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class SpeedBox_Pointer : MonoBehaviour
 {
-    public float SpeedPointerPersent;
+    public float SpeedPointerPresent;
 
     [SerializeField]
     SpeedBoxType speedBoxType;
+    private Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -17,22 +24,23 @@ public class SpeedBox_Pointer : MonoBehaviour
             case SpeedBoxType.BOOST:
                 float Bv = Car.instance.GetVelocityMagnitudeForSpeedBox() * 0.01f;
                 float BvNormal = Mathf.Clamp(Bv, 0f, 100f);
-                SpeedPointerPersent = BvNormal;
+                SpeedPointerPresent = BvNormal;
                 break;
             case SpeedBoxType.RPM:
                 float Rpm = Car.instance.GetVelocityMagnitudeForCarSound() * 0.05f;
                 float RpmNormal = Mathf.Clamp(Rpm, 0f, 100f);
-                SpeedPointerPersent = RpmNormal;
+                SpeedPointerPresent = RpmNormal;
                 break;
             default:
                 break;
         }
 
+        PointerPosition();
     }
 
-    private void FixedUpdate()
+    private void PointerPosition()
     {
-        float Z = 120 - SpeedPointerPersent * 2.4f;
+        float Z = 120 - SpeedPointerPresent * 2.4f;
         Quaternion b = Quaternion.Euler(0, 0, Z);
 
 
@@ -42,7 +50,7 @@ public class SpeedBox_Pointer : MonoBehaviour
         }
 
         if (transform.localRotation.eulerAngles.z >= 60 & transform.localRotation.eulerAngles.z <= 130 &
-           SpeedPointerPersent >= 80)
+           SpeedPointerPresent >= 80)
         {
             Z = 120 - 45 * 2.4f;
         }
@@ -55,6 +63,6 @@ public class SpeedBox_Pointer : MonoBehaviour
         b = Quaternion.Euler(0, 0, Z);
 
 
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, b, 5 * Time.deltaTime);
+        rb.transform.localRotation = Quaternion.Slerp(transform.localRotation, b, 5 * Time.deltaTime);
     }
 }
